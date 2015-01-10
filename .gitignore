@@ -1,0 +1,17 @@
+target/
+build/
+.gradle
+classes
+datanucleus.log
+.DS_Store
+out
+*.iml
+*.ipr
+**/*.class
+**/target
+
+*.iws
+.idea
+.settings
+.classpath
+.project
