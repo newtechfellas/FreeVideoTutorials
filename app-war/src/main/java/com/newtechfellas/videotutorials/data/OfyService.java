@@ -13,7 +13,8 @@ import com.googlecode.objectify.ObjectifyService;
  */
 public class OfyService {
     static {
-//        factory().register(Test.class);
+        factory().register(VideoCategoryEntity.class);
+        factory().register(VideoEntity.class);
     }
 
     public static Objectify ofy() {
