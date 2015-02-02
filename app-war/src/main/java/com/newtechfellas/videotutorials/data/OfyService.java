@@ -14,7 +14,7 @@ import com.googlecode.objectify.ObjectifyService;
 public class OfyService {
     static {
         factory().register(VideoCategoryEntity.class);
-        factory().register(VideoEntity.class);
+        factory().register(VideoCourseEntity.class);
     }
 
     public static Objectify ofy() {

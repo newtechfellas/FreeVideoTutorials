@@ -24,6 +24,16 @@ public class RepositoryUtil {
         return applyFilters(queryForEntity(entityClass), filters).list();
     }
 
+    public static long getTotalEntitiesCount(Class entityClass) {
+        int count = 0;
+        //TODO: Why is there not an easy way to get count of entities in Data Store ? Implement this
+//        DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+//        Entity globalStat = datastore.prepare(new Query("__Stat_Total__")).asSingleEntity();
+//        Long totalBytes = (Long) globalStat.getProperty("bytes");
+//        Long totalEntities = (Long) globalStat.getProperty("count");
+        return count;
+    }
+
     public static <E> List<E> findEntities(Class<E> entityClass) {
         return queryForEntity(entityClass).list();
     }

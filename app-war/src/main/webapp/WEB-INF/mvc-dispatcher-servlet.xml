@@ -7,6 +7,13 @@
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
     <!-- Configure to plugin JSON as request and response in method handler -->
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
         <property name="messageConverters">
@@ -20,6 +27,9 @@
     </bean>
 
     <mvc:annotation-driven/>
+
+    <!-- controllers -->
+    <bean class="com.newtechfellas.videotutorials.controller.HomeController"></bean>
 
     <!-- Bean to show you Di in GAE, via Spring, also init the MovieController -->
     <bean class="com.newtechfellas.videotutorials.exception.GlobalControllerExceptionHandler"></bean>
