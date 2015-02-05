@@ -12,6 +12,7 @@ import java.util.List;
  */
 public interface VideosRepository {
     long getTotalVideosCount();
+    List<VideoCourseEntity> getAllVideos();
     List<VideoCourseEntity> searchVideos(List<String> searchStrings);
     List<VideoCourseEntity> getVideosForCategory(String category);
     List<VideoCourseEntity> getVideosForTechnology(String technology);

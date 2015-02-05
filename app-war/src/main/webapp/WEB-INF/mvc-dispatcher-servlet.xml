@@ -7,7 +7,7 @@
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-
+    <import resource="repositories.xml"></import>
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>
@@ -30,6 +30,9 @@
 
     <!-- controllers -->
     <bean class="com.newtechfellas.videotutorials.controller.HomeController"></bean>
+    <bean class="com.newtechfellas.videotutorials.controller.DataController">
+        <property name="videoRepository" ref="videoRepository"></property>
+    </bean>
 
     <!-- Bean to show you Di in GAE, via Spring, also init the MovieController -->
     <bean class="com.newtechfellas.videotutorials.exception.GlobalControllerExceptionHandler"></bean>

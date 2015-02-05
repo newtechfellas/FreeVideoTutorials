@@ -5,6 +5,6 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean class="com.newtechfellas.videotutorials.repository.impl.DefaultCategoryRepository"></bean>
-    <bean class="com.newtechfellas.videotutorials.repository.impl.DefaultVideoRepository"></bean>
+    <bean id="videoRepository" class="com.newtechfellas.videotutorials.repository.impl.DefaultVideoRepository"></bean>
 
 </beans>

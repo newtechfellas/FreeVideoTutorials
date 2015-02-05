@@ -1,5 +1,6 @@
 package com.newtechfellas.videotutorials.repository.impl;
 
+import com.newtechfellas.videotutorials.data.VideoCategoryEntity;
 import com.newtechfellas.videotutorials.data.VideoCourseEntity;
 import com.newtechfellas.videotutorials.repository.VideosRepository;
 
@@ -36,6 +37,11 @@ public class DefaultVideoRepository implements VideosRepository {
         filters.put("category", category);
         filters.put("technology", technology);
         return findEntitiesWithFilters(VideoCourseEntity.class, filters);
+    }
+
+    @Override
+    public List<VideoCourseEntity> getAllVideos() {
+        return RepositoryUtil.findEntities(VideoCourseEntity.class);
     }
 
     @Override
